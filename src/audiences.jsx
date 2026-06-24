@@ -40,7 +40,7 @@ function Audiences() {
           </h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+        <div className="audiences-grid">
           {items.map((it, i) => <AudienceCard key={i} {...it} />)}
         </div>
       </div>

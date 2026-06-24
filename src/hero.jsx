@@ -36,12 +36,7 @@ function Hero() {
         <rect width="100%" height="100%" fill="url(#hero-ovals)" />
       </svg>
 
-      <div className="container" style={{
-        position: "relative", zIndex: 1,
-        display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 48,
-        alignItems: "center", alignContent: "center", minHeight: "calc(100vh - 72px)",
-        paddingTop: 56, paddingBottom: 56,
-      }}>
+      <div className="container hero-inner" style={{ position: "relative", zIndex: 1 }}>
         {/* Left — copy */}
         <div className="reveal">
           <div className="eyebrow eyebrow-clm" style={{ marginBottom: 22 }}>Coming Soon</div>
@@ -100,7 +95,7 @@ function Hero() {
 
 function ClmDevice() {
   return (
-    <div className="reveal" style={{ position: "relative", width: 520, height: 600, maxWidth: "100%" }}>
+    <div className="reveal clm-device">
       {/* ambient glow */}
       <div style={{
         position: "absolute", inset: 0,
@@ -109,7 +104,7 @@ function ClmDevice() {
         animation: "clm-glow-pulse 6s ease-in-out infinite",
       }} />
 
-      <svg viewBox="0 0 520 600" width="520" height="600" style={{ position: "relative", display: "block" }}>
+      <svg viewBox="0 0 520 600" width="100%" height="100%" style={{ position: "relative", display: "block" }}>
         <defs>
           <linearGradient id="clm-pill" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" style={{ stopColor: "var(--clm-pill-1)" }} />

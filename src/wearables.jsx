@@ -21,7 +21,7 @@ function Wearables() {
   return (
     <section style={{ padding: "120px 0", background: "var(--clm-bg)", borderTop: "1px solid var(--clm-line)" }}>
       <div className="container">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "end", marginBottom: 56 }}>
+        <div className="wearables-head">
           <div>
             <div className="eyebrow eyebrow-clm" style={{ marginBottom: 20 }}>The Science</div>
             <h2 className="h-1" style={{ margin: 0, color: "var(--clm-ink)" }}>
@@ -35,7 +35,7 @@ function Wearables() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+        <div className="wearables-grid">
           {items.map((it, i) => (
             <div key={i} style={{
               background: "var(--clm-bg-2)",

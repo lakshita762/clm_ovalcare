@@ -33,7 +33,7 @@ function Footer() {
   return (
     <footer style={{ background: "var(--clm-bg-2)", borderTop: "1px solid var(--clm-line)", padding: "80px 0 40px" }}>
       <div className="container">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr) 1.4fr", gap: 48, marginBottom: 64, justifyItems: "center" }}>
+        <div className="footer-grid">
 
           {groups.map((g, i) => (
             <div key={i}>
@@ -63,9 +63,8 @@ function Footer() {
           </div>
         </div>
 
-        <div style={{
+        <div className="footer-bottom" style={{
           paddingTop: 32, borderTop: "1px solid var(--clm-line)",
-          display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24,
         }}>
           <div style={{ fontSize: 13, color: "var(--clm-ink-3)" }}>
             © 2026 OVAL Health, Inc. All rights reserved. OVAL does not provide medical advice and is not intended to provide a diagnosis of disease or illness, or prescribe treatment of a disease or illness. All information provided herein is for informational and educational purposes only and has not been evaluated by the FDA. Always consult your physician with questions regarding your medical condition and before beginning any health or fitness routine.

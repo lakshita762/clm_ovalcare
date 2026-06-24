@@ -8,7 +8,7 @@
     })();
   </script>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=1280" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OVAL CLM™ — Continuous Metabolic Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -116,6 +116,57 @@
     /* ── section frame ───────────────────────────── */
     .container { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
     section { position: relative; }
+
+    /* ── responsive layout blocks (desktop defaults) ───── */
+    .hero-inner {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px;
+      align-items: center; align-content: center; min-height: calc(100vh - 72px);
+      padding-top: 56px; padding-bottom: 56px;
+    }
+    .clm-device { position: relative; width: 100%; max-width: 520px; aspect-ratio: 520 / 600; margin: 0 auto; }
+    .wearables-head { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 56px; }
+    .wearables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .flow-head { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 48px; }
+    .flow-panel { padding: 44px 48px; }
+    .flow-diagram { display: flex; align-items: flex-start; }
+    .audiences-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr) 1.4fr; gap: 48px; margin-bottom: 64px; justify-items: center; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+    /* ── responsive breakpoints ──────────────────────── */
+    @media (max-width: 900px) {
+      .container { padding: 0 28px; }
+
+      .h-display { font-size: 44px; }
+      .h-1 { font-size: 34px; }
+      .h-2 { font-size: 28px; }
+      .lede { font-size: 17px; }
+
+      .hero-inner {
+        grid-template-columns: 1fr; min-height: auto;
+        padding-top: 36px; padding-bottom: 48px; gap: 40px;
+      }
+      .clm-device { max-width: 320px; }
+
+      .wearables-head, .flow-head { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+      .wearables-grid { grid-template-columns: 1fr; gap: 16px; }
+      .flow-panel { padding: 28px 20px; overflow-x: auto; }
+      .flow-diagram { width: max-content; min-width: 100%; }
+      .audiences-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; justify-items: start; text-align: left; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    @media (max-width: 560px) {
+      .container { padding: 0 20px; }
+      .h-display { font-size: 36px; }
+      .h-1 { font-size: 28px; }
+      .h-2 { font-size: 24px; }
+
+      .audiences-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { font-size: 12px; }
+    }
 
     /* ── eyebrow / kicker ─────────────────────────── */
     .eyebrow {

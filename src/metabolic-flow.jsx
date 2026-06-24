@@ -55,7 +55,7 @@ function MetabolicFlow() {
 function FlowBlock({ eyebrow, title, subhead, linkLabel, steps }) {
   return (
     <div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "end", marginBottom: 48 }}>
+      <div className="flow-head">
         <div>
           <div className="eyebrow eyebrow-clm" style={{ marginBottom: 20 }}>{eyebrow}</div>
           <h2 className="h-1" style={{ margin: 0, color: "var(--clm-ink)" }}>{title}</h2>
@@ -70,8 +70,8 @@ function FlowBlock({ eyebrow, title, subhead, linkLabel, steps }) {
         </div>
       </div>
 
-      <div style={{
-        padding: "44px 48px", borderRadius: 24,
+      <div className="flow-panel" style={{
+        borderRadius: 24,
         background: "rgba(79,216,255,0.03)", border: "1px solid var(--clm-line)",
       }}>
         <FlowDiagram steps={steps} />
@@ -82,7 +82,7 @@ function FlowBlock({ eyebrow, title, subhead, linkLabel, steps }) {
 
 function FlowDiagram({ steps }) {
   return (
-    <div style={{ display: "flex", alignItems: "flex-start" }}>
+    <div className="flow-diagram">
       {steps.map((s, i) => (
         <React.Fragment key={i}>
           <FlowNode {...s} />
@@ -122,9 +122,9 @@ function FlowNode({ icon: IconEl, value, clm, label, sub, subColor }) {
 
 function FlowArrow() {
   return (
-    <div style={{ flex: "1 1 auto", display: "flex", alignItems: "center", justifyContent: "center",
+    <div className="flow-arrow" style={{ flex: "1 1 auto", display: "flex", alignItems: "center", justifyContent: "center",
       color: "rgba(79,216,255,0.3)", marginTop: 22, minWidth: 16, padding: "0 4px" }}>
-      <IconArrow size={18} stroke={2} />
+      <IconArrow size={36} stroke={2} />
     </div>
   );
 }
