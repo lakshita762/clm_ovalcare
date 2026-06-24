@@ -64,11 +64,11 @@ function AudienceCard({ label, icon: IconEl, caption, grad, img }) {
       }}>
         <img src={img} alt={label} style={{
           position: "absolute", inset: 0, width: "100%", height: "100%",
-          objectFit: "cover", opacity: 0.85, mixBlendMode: "luminosity",
+          objectFit: "cover",
         }} />
         <div style={{
           position: "absolute", inset: 0,
-          background: `linear-gradient(160deg, ${grad[0]}66 0%, ${grad[1]}99 100%)`,
+          background: "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%)",
         }} />
 
         <div style={{
