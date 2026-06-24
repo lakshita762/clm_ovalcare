@@ -5,24 +5,28 @@ function Audiences() {
       icon: IconStetho,
       caption: "Monitor metabolic health in real time to guide preventative care.",
       grad: ["#1BB271", "#0A1F17"],
+      img: "assets/healthcare.jpg",
     },
     {
       label: "Employers",
       icon: IconTrend,
       caption: "Improve workforce performance and reduce healthcare costs.",
       grad: ["#185038", "#0A1F17"],
+      img: "assets/employers.jpg",
     },
     {
       label: "Military",
       icon: IconShield,
       caption: "Optimize readiness and enhance recovery resilience.",
       grad: ["#0E3A52", "#03222F"],
+      img: "assets/military.jpg",
     },
     {
       label: "Longevity",
       icon: IconLeaf,
       caption: "Age with vitality through continuous metabolic insight.",
       grad: ["#2DDF94", "#185038"],
+      img: "assets/longevity.jpg",
     },
   ];
 
@@ -44,7 +48,7 @@ function Audiences() {
   );
 }
 
-function AudienceCard({ label, icon: IconEl, caption, grad }) {
+function AudienceCard({ label, icon: IconEl, caption, grad, img }) {
   return (
     <a href="#" style={{
       display: "flex", flexDirection: "column", borderRadius: 20, overflow: "hidden",
@@ -58,14 +62,14 @@ function AudienceCard({ label, icon: IconEl, caption, grad }) {
         background: `linear-gradient(160deg, ${grad[0]} 0%, ${grad[1]} 100%)`,
         overflow: "hidden",
       }}>
-        <svg style={{ position: "absolute", inset: 0, opacity: 0.12 }} width="100%" height="100%">
-          <defs>
-            <pattern id={`audience-ovals-${label}`} width="160" height="110" patternUnits="userSpaceOnUse">
-              <ellipse cx="80" cy="55" rx="68" ry="34" fill="none" stroke="white" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill={`url(#audience-ovals-${label})`} />
-        </svg>
+        <img src={img} alt={label} style={{
+          position: "absolute", inset: 0, width: "100%", height: "100%",
+          objectFit: "cover", opacity: 0.85, mixBlendMode: "luminosity",
+        }} />
+        <div style={{
+          position: "absolute", inset: 0,
+          background: `linear-gradient(160deg, ${grad[0]}66 0%, ${grad[1]}99 100%)`,
+        }} />
 
         <div style={{
           position: "absolute", top: 20, left: 20,
