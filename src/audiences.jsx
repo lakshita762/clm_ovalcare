@@ -35,7 +35,7 @@ function Audiences() {
       <div className="container">
         <div style={{ textAlign: "center", maxWidth: 760, margin: "0 auto 64px" }}>
           <div className="eyebrow eyebrow-clm" style={{ marginBottom: 20, justifyContent: "center" }}>The Impact</div>
-          <h2 className="h-1" style={{ margin: 0, color: "white" }}>
+          <h2 className="h-1" style={{ margin: 0, color: "var(--clm-ink)" }}>
             Preventative diagnostics can <span className="serif" style={{ color: "var(--clm-blue)" }}>improve outcomes</span> and reduce healthcare costs.
           </h2>
         </div>

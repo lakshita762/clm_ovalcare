@@ -17,7 +17,7 @@ function MetabolicFlow() {
 
   return (
     <section style={{
-      padding: "120px 0", background: "var(--clm-bg-2)", color: "white",
+      padding: "120px 0", background: "var(--clm-bg-2)", color: "var(--clm-ink)",
       position: "relative", overflow: "hidden", borderTop: "1px solid var(--clm-line)",
     }}>
       <svg style={{ position: "absolute", inset: 0, opacity: 0.06, pointerEvents: "none" }} width="100%" height="100%">
@@ -58,7 +58,7 @@ function FlowBlock({ eyebrow, title, subhead, linkLabel, steps }) {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "end", marginBottom: 48 }}>
         <div>
           <div className="eyebrow eyebrow-clm" style={{ marginBottom: 20 }}>{eyebrow}</div>
-          <h2 className="h-1" style={{ margin: 0, color: "white" }}>{title}</h2>
+          <h2 className="h-1" style={{ margin: 0, color: "var(--clm-ink)" }}>{title}</h2>
         </div>
         <div>
           <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--clm-ink-2)", maxWidth: "44ch", margin: 0 }}>
@@ -113,7 +113,7 @@ function FlowNode({ icon: IconEl, value, clm, label, sub, subColor }) {
             : <span style={{ fontWeight: 700, fontSize: 22, letterSpacing: "-0.02em" }}>{value}</span>}
       </div>
       <div style={{ textAlign: "center" }}>
-        <div style={{ fontSize: 14, fontWeight: 600, color: "white" }}>{label}</div>
+        <div style={{ fontSize: 14, fontWeight: 600, color: "var(--clm-ink)" }}>{label}</div>
         {sub && <div style={{ fontSize: 11, color: subColor || "var(--clm-ink-3)", marginTop: 2 }}>{sub}</div>}
       </div>
     </div>

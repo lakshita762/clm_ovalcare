@@ -21,7 +21,7 @@ function Hero() {
   return (
     <section style={{
       background: "var(--clm-bg)",
-      color: "white",
+      color: "var(--clm-ink)",
       position: "relative",
       overflow: "hidden",
       paddingTop: 72,
@@ -46,7 +46,7 @@ function Hero() {
         <div className="reveal">
           <div className="eyebrow eyebrow-clm" style={{ marginBottom: 22 }}>Coming Soon</div>
 
-          <h1 className="h-display" style={{ color: "white", margin: 0 }}>
+          <h1 className="h-display" style={{ color: "var(--clm-ink)", margin: 0 }}>
             What Your<br/>
             <span style={{
               display: "inline-block",
@@ -60,7 +60,7 @@ function Hero() {
           </h1>
 
           <p style={{
-            fontSize: 20, fontWeight: 500, color: "white",
+            fontSize: 20, fontWeight: 500, color: "var(--clm-ink)",
             marginTop: 28, letterSpacing: "-0.01em", lineHeight: 1.5,
           }}>
             OVAL's <span style={{ color: "var(--clm-blue)" }}>Continuous Metabolic Intelligence™</span> platform.
@@ -112,8 +112,8 @@ function ClmDevice() {
       <svg viewBox="0 0 520 600" width="520" height="600" style={{ position: "relative", display: "block" }}>
         <defs>
           <linearGradient id="clm-pill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#173852" />
-            <stop offset="1" stopColor="#030710" />
+            <stop offset="0" style={{ stopColor: "var(--clm-pill-1)" }} />
+            <stop offset="1" style={{ stopColor: "var(--clm-pill-2)" }} />
           </linearGradient>
           <linearGradient id="clm-wave" x1="0" x2="1">
             <stop offset="0" stopColor="#4FD8FF" stopOpacity="0" />
@@ -121,7 +121,7 @@ function ClmDevice() {
             <stop offset="1" stopColor="#4FD8FF" stopOpacity="0" />
           </linearGradient>
           <radialGradient id="clm-sheen" cx="50%" cy="0%" r="70%">
-            <stop offset="0" stopColor="rgba(255,255,255,0.18)" />
+            <stop offset="0" style={{ stopColor: "var(--clm-sheen)" }} />
             <stop offset="1" stopColor="rgba(255,255,255,0)" />
           </radialGradient>
         </defs>
@@ -144,12 +144,12 @@ function ClmDevice() {
         <rect x="160" y="120" width="200" height="360" rx="100" fill="url(#clm-sheen)" />
 
         {/* wordmark */}
-        <text x="260" y="270" textAnchor="middle" fontSize="24" fontWeight="700" fill="white" letterSpacing="3" fontFamily="Geist, sans-serif">OVAL</text>
+        <text x="260" y="270" textAnchor="middle" fontSize="24" fontWeight="700" style={{ fill: "var(--clm-pill-ink)" }} letterSpacing="3" fontFamily="Geist, sans-serif">OVAL</text>
         <text x="260" y="308" textAnchor="middle" fontSize="34" fontWeight="700" fill="#4FD8FF" letterSpacing="4" fontFamily="Geist, sans-serif">CLM</text>
 
         {/* mini live waveform */}
         <path d="M190 360 h14 l8 -26 l12 48 l10 -34 l12 22 h14"
-          fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="2.5"
+          fill="none" style={{ stroke: "var(--clm-pill-ink-soft)" }} strokeWidth="2.5"
           strokeLinecap="round" strokeLinejoin="round" />
       </svg>
 
@@ -168,7 +168,7 @@ function ClmDevice() {
         display: "flex", alignItems: "center", gap: 8,
       }}>
         <IconHeart size={14} stroke={2} />
-        <span className="label-mono" style={{ color: "rgba(255,255,255,0.6)" }}>Heart Rate</span>
+        <span className="label-mono" style={{ color: "var(--clm-ink-2)" }}>Heart Rate</span>
       </div>
 
       <div style={{

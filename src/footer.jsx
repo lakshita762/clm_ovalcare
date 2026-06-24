@@ -53,7 +53,7 @@ function Footer() {
           ))}
 
           <div>
-            <img src="assets/oval-logo.png" alt="OVAL" style={{ height: 32, display: "block" }} />
+            <img src="assets/oval-logo.png" alt="OVAL" className="oval-logo" style={{ height: 32, display: "block" }} />
             <p style={{ fontSize: 14, color: "var(--clm-ink-3)", lineHeight: 1.6, marginTop: 20, maxWidth: "32ch" }}>
               Interested in learning how we can support you?
             </p>

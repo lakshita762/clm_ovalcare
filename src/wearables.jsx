@@ -24,7 +24,7 @@ function Wearables() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "end", marginBottom: 56 }}>
           <div>
             <div className="eyebrow eyebrow-clm" style={{ marginBottom: 20 }}>The Science</div>
-            <h2 className="h-1" style={{ margin: 0, color: "white" }}>
+            <h2 className="h-1" style={{ margin: 0, color: "var(--clm-ink)" }}>
               Lactate is a window into your <span className="serif" style={{ color: "var(--clm-blue)" }}>mitochondrial function</span>.
             </h2>
           </div>
@@ -46,7 +46,7 @@ function Wearables() {
             }}>
               <div style={{ display: "flex", justifyContent: "center", paddingTop: 8 }}>{it.visual}</div>
               <div style={{ marginTop: "auto", textAlign: "center" }}>
-                <div style={{ fontSize: 20, fontWeight: 500, letterSpacing: "-0.015em", color: "white" }}>{it.name}</div>
+                <div style={{ fontSize: 20, fontWeight: 500, letterSpacing: "-0.015em", color: "var(--clm-ink)" }}>{it.name}</div>
                 <p style={{ fontSize: 14, marginTop: 8, lineHeight: 1.55, color: "var(--clm-ink-3)" }}>
                   {it.caption}
                 </p>
@@ -69,7 +69,7 @@ function DeviceBadge({ icon: IconEl, value, unit }) {
       color: "var(--clm-blue)",
     }}>
       <IconEl size={26} stroke={1.5} />
-      <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: "-0.02em", color: "white" }}>{value}</div>
+      <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: "-0.02em", color: "var(--clm-ink)" }}>{value}</div>
       <div className="label-mono" style={{ color: "var(--clm-ink-3)" }}>{unit}</div>
     </div>
   );

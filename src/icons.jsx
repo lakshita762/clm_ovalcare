@@ -138,6 +138,17 @@ const IconRunner = (p) => <Icon {...p}>
   <path d="M10.5 8 8 10.5l1 3.5L6 18M10.5 8l3 1.5 2-1.5M9.5 13.5l3.5-1 2.5 3.5"/>
 </Icon>;
 
+// Sun — light theme toggle
+const IconSun = (p) => <Icon {...p}>
+  <circle cx="12" cy="12" r="4"/>
+  <path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>
+</Icon>;
+
+// Moon — dark theme toggle
+const IconMoon = (p) => <Icon {...p}>
+  <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5Z"/>
+</Icon>;
+
 window.Icon = Icon;
 window.IconArrow = IconArrow;
 window.IconArrowUp = IconArrowUp;
@@ -166,3 +177,5 @@ window.IconWatch = IconWatch;
 window.IconDrop = IconDrop;
 window.IconBrain = IconBrain;
 window.IconRunner = IconRunner;
+window.IconSun = IconSun;
+window.IconMoon = IconMoon;

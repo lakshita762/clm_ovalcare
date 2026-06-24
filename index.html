@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("clm-theme");
+      document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+    })();
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=1280" />
   <title>OVAL CLM™ — Continuous Metabolic Intelligence</title>
@@ -24,14 +30,39 @@
       --green-mist: #F1FBF5;
       --green-glow: #1BB271;
 
-      /* CLM theme — lactate blue */
+      /* CLM theme — lactate blue (dark, default) */
       --clm-bg: #060A12;
       --clm-bg-2: #0B1220;
       --clm-blue: #4FD8FF;
       --clm-blue-deep: #0E3A52;
       --clm-line: rgba(255,255,255,0.1);
+      --clm-ink: #FFFFFF;
       --clm-ink-2: rgba(255,255,255,0.68);
       --clm-ink-3: rgba(255,255,255,0.42);
+      --clm-nav-bg: rgba(6,10,18,0.55);
+      --clm-pill-1: #173852;
+      --clm-pill-2: #030710;
+      --clm-pill-ink: #FFFFFF;
+      --clm-pill-ink-soft: rgba(255,255,255,0.55);
+      --clm-sheen: rgba(255,255,255,0.18);
+    }
+
+    /* CLM theme — light variant, toggled via data-theme on <html> */
+    html[data-theme="light"] {
+      --clm-bg: #FFFFFF;
+      --clm-bg-2: #F2F7FA;
+      --clm-blue: #0B84A6;
+      --clm-blue-deep: #CFEFFA;
+      --clm-line: rgba(10,31,23,0.1);
+      --clm-ink: #0A1F17;
+      --clm-ink-2: rgba(10,31,23,0.68);
+      --clm-ink-3: rgba(10,31,23,0.42);
+      --clm-nav-bg: rgba(255,255,255,0.72);
+      --clm-pill-1: #EAF6FD;
+      --clm-pill-2: #FFFFFF;
+      --clm-pill-ink: #0A1F17;
+      --clm-pill-ink-soft: rgba(10,31,23,0.55);
+      --clm-sheen: rgba(10,31,23,0.08);
     }
 
     * { box-sizing: border-box; }
@@ -44,10 +75,14 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
       overflow-x: hidden;
+      transition: background-color .25s ease;
     }
 
     a { color: inherit; text-decoration: none; }
     button { font-family: inherit; cursor: pointer; }
+
+    .oval-logo { filter: none; transition: filter .2s ease; }
+    html[data-theme="light"] .oval-logo { filter: invert(1); }
 
     /* ── primitive button ─────────────────────────── */
     .btn {
