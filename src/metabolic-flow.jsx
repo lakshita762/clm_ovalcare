@@ -124,7 +124,10 @@ function FlowArrow() {
   return (
     <div className="flow-arrow" style={{ flex: "1 1 auto", display: "flex", alignItems: "center", justifyContent: "center",
       color: "rgba(79,216,255,0.3)", marginTop: 22, minWidth: 16, padding: "0 4px" }}>
-      <IconArrow size={36} stroke={2} />
+      <svg width="56" height="20" viewBox="0 0 64 24" fill="none">
+        <path d="M2 12h54M44 4l12 8-12 8" stroke="currentColor" strokeWidth="1.75"
+          strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
     </div>
   );
 }
